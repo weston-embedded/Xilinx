@@ -1,0 +1,36 @@
+#########################################################################################################
+#                                             uCOS XSDK BSP
+#
+#                    Copyright 2014-2020 Silicon Laboratories Inc. www.silabs.com
+#
+#                                 SPDX-License-Identifier: APACHE-2.0
+#
+#               This software is subject to an open source license and is distributed by
+#                Silicon Laboratories Inc. pursuant to the terms of the Apache License,
+#                    Version 2.0 available at www.apache.org/licenses/LICENSE-2.0.
+#
+#########################################################################################################
+
+
+OPTION psf_version = 2.1;
+
+BEGIN LIBRARY ucos_dns-c
+  OPTION drc = ucos_dns-c_drc;
+  OPTION copyfiles = all;
+  OPTION REQUIRES_OS = (ucos);
+  OPTION desc = "uC/DNSc DNS Client";
+  OPTION VERSION = 1.45;
+  OPTION NAME = ucos_dns-c;
+
+BEGIN CATEGORY 01. DEBUG
+    PARAM name = 01. DEBUG;
+    PARAM name = DNSc_CFG_ARG_CHK_EXT_EN, desc = "Enable external argument checking", type = bool, default = false;
+END CATEGORY
+
+BEGIN CATEGORY 02. FEATURES
+    PARAM name = 02. FEATURES;
+    PARAM name = DNSc_CFG_MODE_ASYNC_EN, desc = "Enable asynchronous mode feature", type = bool, default = false;
+    PARAM name = DNSc_CFG_MODE_BLOCK_EN, desc = "Enable blocking option", type = bool, default = false;
+END CATEGORY
+
+END LIBRARY

@@ -1,0 +1,26 @@
+#########################################################################################################
+#                                             uCOS XSDK BSP
+#
+#                    Copyright 2014-2020 Silicon Laboratories Inc. www.silabs.com
+#
+#                                 SPDX-License-Identifier: APACHE-2.0
+#
+#               This software is subject to an open source license and is distributed by
+#                Silicon Laboratories Inc. pursuant to the terms of the Apache License,
+#                    Version 2.0 available at www.apache.org/licenses/LICENSE-2.0.
+#
+#########################################################################################################
+
+
+OPTION psf_version = 2.1;
+
+BEGIN driver ucos_axiethernetlite
+  OPTION supported_peripherals = (axi_ethernetlite);
+  OPTION driver_state = ACTIVE;
+  OPTION copyfiles = all;
+  OPTION VERSION = 1.45;
+  OPTION NAME = ucos_axiethernetlite;
+END driver
+
+BEGIN INTERFACE ethernet
+END INTERFACE
